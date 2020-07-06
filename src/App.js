@@ -1,11 +1,8 @@
 import React from 'react'
 // import callApi, { initRequest } from './callApi'
 
-// import { ConfigProvider } from 'antd'
-// import zhCN from 'antd/es/locale/zh_CN'
-import 'antd/dist/antd.css'
 
-import './App.scss'
+import './style/App.scss'
 
 import RootContext, { getInitialRootContextValue } from './components/RootContext/RootContext'
 
@@ -28,7 +25,6 @@ export default class App extends React.Component {
   render() {
     const { showComponent } = this.state
     return (
-      // <ConfigProvider locale={zhCN}>
         <div className="dqm-container">
           <RootContext.Provider value={this.state}>
             <RootContext.Consumer>
@@ -41,7 +37,6 @@ export default class App extends React.Component {
             </RootContext.Consumer>
           </RootContext.Provider>
         </div>
-      // </ConfigProvider>
     )
   }
 }
