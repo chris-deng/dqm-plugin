@@ -1,0 +1,153 @@
+.dqm-container {
+  // width: 100%;
+  // height: 100%;
+  // margin: 20px;
+  padding: 20px;
+  background: #fff;
+  p {
+    margin: 0;
+  }
+  button.button-link {
+    color: #1890ff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    height: 32px;
+    padding: 4px 15px;
+    background:transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:active {
+      border:none;
+      color: #096dd9;
+      background: transparent;
+      border-color: #096dd9;
+      text-shadow: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+    &:focus {
+      background: transparent;
+      border-color: transparent;
+    }
+  }
+
+
+
+  .dqm-list {
+    .dqm-row {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-around;
+
+      margin-left: -10px;
+      margin-right: -10px;
+      &.needMarginButton {
+        margin-bottom: 20px;
+      }
+
+      .dqm-col {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .dqm-col-12 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .dqm-col-8 {
+        flex: 0 0 33.33333333%;
+        max-width: 33.33333333%;
+      }
+      .dqm-col-4 {
+        display: block;
+        flex: 0 0 16.66666667%;
+        max-width: 16.66666667%;
+      }
+    }
+    .dqm-card {
+      box-sizing: border-box;
+      margin:0;
+      padding: 0;
+      position: relative;
+
+      color: rgba(0,0,0,.65);
+      font-size: 14px;
+
+      background: #fff;
+      border: 1px solid #f0f0f0;
+      border-radius: 2px;
+      .card-head {
+        box-sizing: border-box;
+        min-height: 48px;
+        margin-bottom: -1px;
+        padding:16px 24px;
+
+        color: rgba(0,0,0,.85);
+        font-weight: 500;
+        font-size: 16px;
+
+        background: transparent;
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 2px 2px 0 0;
+
+        .card-head-row {
+          margin-left: 0;
+        }
+        .header-left {
+          display: flex;
+          border-right: 1px solid #e6e8eb;
+          .icon {
+            margin-right: 20px;
+            .header-avatar {
+              display: inline-block;
+              width: 60px;
+              height: 60px;
+              line-height: 60px;
+              margin:0;
+              padding: 0;
+              overflow: hidden;
+              text-align: center;
+              font-size: 30px;
+              color: #fff;
+              box-sizing: border-box;
+              border-radius: 50%;
+
+              background-color: #49a9ee;
+            }
+            // .avatar {
+            //   background: #49a9ee;
+            // }
+          }
+          .header-txt {
+            .label {
+              color: #b5b8bd;
+            }
+            .plugin-num {
+              font-size: 30px;
+              max-width: 200px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+        .header-right {
+          display: flex;
+          margin-left: 10px;
+          .minus-num {
+            color: #ff4747;
+            font-size: 30px;
+          }
+          .plugin-detail {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+
