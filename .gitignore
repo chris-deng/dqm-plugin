@@ -1,5 +1,6 @@
 /coverage
 /demo/dist
+/demo/src/config.js
 /es
 /lib
 /node_modules

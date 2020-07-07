@@ -1,6 +1,6 @@
 {
   "name": "dqm-plugin",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "dqm React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -25,14 +25,16 @@
   "peerDependencies": {
     "react": "16.x",
     "react-dom": "^16.x",
-    "antd": "^4.x"
+    "antd": "^4.x",
+    "axios": "^0.x"
   },
   "devDependencies": {
+    "antd": "^4.2.0",
+    "axios": "^0.19.2",
     "nwb": "0.25.x",
     "nwb-sass": "^0.10.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "antd": "^4.2.0"
+    "react-dom": "^16.13.1"
   },
   "author": "",
   "homepage": "",

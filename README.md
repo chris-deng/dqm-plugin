@@ -73,3 +73,28 @@ dqm 前端插件
 
 1. 关于传参 -- 需传入 project_code 作为数据一致性对比的项目参数
 2. 定制 tab 项 -- 用户传入 include_category 数组作为一级 tab 显示与否的筛选条件
+
+### 引用
+
+1. 下载依赖包
+
+```
+npm install @nie/dqm-plugin
+```
+
+2. 引用组件
+
+```
+import DQM from '@nie/dqm-plugin'
+import '@nie/dqm-plugin/css/index.css'
+
+<DQM auth_data={authToken: '', accessToken: ''} project_code='accdocker' plugin_include={['resource']} />
+```
+
+3. 设置 nginx 代理
+
+```
+proxy: {
+  '/dqm/api': 'http://dqm.nie.netease.com:8080'
+}
+```

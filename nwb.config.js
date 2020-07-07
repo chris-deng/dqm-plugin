@@ -9,6 +9,14 @@ module.exports = {
       }
     }
   },
+  devServer: {
+    proxy: {
+      '/dqm/api': {
+        target: 'http://dqm.nie.netease.com:8080',
+        pathRewrite: {'^/dqm/api' : ''}
+      }
+    }
+  },
   webpack: {
     aliases: {},
     rules: {
@@ -22,14 +30,8 @@ module.exports = {
     extractCSS: {
       filename: 'dqm-plugin.css'
     },
-  //  extra: {
-  //   extractText: {
-  //     allChunks: true,
-  //     filename: 'dqm-plugin.css'
-  //   },
-  //  },
     autoprefixer: {
       remove: false,
     }
-  }
+  },
 }

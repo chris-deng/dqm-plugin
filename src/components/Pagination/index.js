@@ -12,9 +12,9 @@ export default function PageOption(props) {
     current: props.pageData._page,
     total: props.pageData.total,
     showTotal: (total) => `共 ${total} 条`,
-    showQuickJumper: true,
-    showSizeChanger: true,
-    pageSizeOptions: ['10', '20', '50', '100'],
+    // showQuickJumper: true,
+    // showSizeChanger: true,
+    // pageSizeOptions: ['10', '20', '50', '100'],
     onChange: (page, pageSize) => {
       const pageData = { _num: pageSize, _page: page }
       props.updatePageData(pageData)

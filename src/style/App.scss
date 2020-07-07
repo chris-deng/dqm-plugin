@@ -1,11 +1,12 @@
-@import './style/antd-table.scss';
-@import './style/antd-tabs.scss';
-
+@import './antd-table.scss';
+@import './antd-tabs.scss';
+@import './antd-pagination.scss';
+// @import './antd-select.scss';
 .dqm-container {
   // width: 100%;
   // height: 100%;
   // margin: 20px;
-  padding: 20px;
+  padding: 10px;
   background: #fff;
   p {
     margin: 0;
@@ -17,27 +18,29 @@
     text-align: center;
     height: 32px;
     padding: 4px 15px;
-    background:transparent;
+    background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
 
     &:active {
-      border:none;
+      border: none;
       color: #096dd9;
       background: transparent;
       border-color: #096dd9;
       text-shadow: none;
       -webkit-box-shadow: none;
-              box-shadow: none;
+      box-shadow: none;
     }
     &:focus {
       background: transparent;
       border-color: transparent;
     }
   }
-
-
+  .dqm-loading {
+    margin: 50px auto;
+    text-align: center;
+  }
 
   .dqm-list {
     .dqm-row {
@@ -72,11 +75,11 @@
     }
     .dqm-card {
       box-sizing: border-box;
-      margin:0;
+      margin: 0;
       padding: 0;
       position: relative;
 
-      color: rgba(0,0,0,.65);
+      color: rgba(0, 0, 0, 0.65);
       font-size: 14px;
 
       background: #fff;
@@ -86,9 +89,9 @@
         box-sizing: border-box;
         min-height: 48px;
         margin-bottom: -1px;
-        padding:16px 24px;
+        padding: 16px 24px;
 
-        color: rgba(0,0,0,.85);
+        color: rgba(0, 0, 0, 0.85);
         font-weight: 500;
         font-size: 16px;
 
@@ -109,7 +112,7 @@
               width: 60px;
               height: 60px;
               line-height: 60px;
-              margin:0;
+              margin: 0;
               padding: 0;
               overflow: hidden;
               text-align: center;
@@ -156,7 +159,9 @@
       }
     }
   }
-  
+  .dqm-detail-container {
+    .ant-select-selector {
+      box-sizing: border-box;
+    }
+  }
 }
-
-

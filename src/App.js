@@ -1,8 +1,8 @@
 import React from 'react'
 // import callApi, { initRequest } from './callApi'
 
-
-import './style/App.scss'
+// import './App.scss'
+// import './style/App.scss'
 
 import RootContext, { getInitialRootContextValue } from './components/RootContext/RootContext'
 
@@ -25,18 +25,18 @@ export default class App extends React.Component {
   render() {
     const { showComponent } = this.state
     return (
-        <div className="dqm-container">
-          <RootContext.Provider value={this.state}>
-            <RootContext.Consumer>
-              {(root) => (
-                <div>
-                  {showComponent === 'list' && <DQMList root={root} {...this.props} />}
-                  {showComponent === 'detail' && <DQMDetail root={root} {...this.props} />}
-                </div>
-              )}
-            </RootContext.Consumer>
-          </RootContext.Provider>
-        </div>
+      <div className="dqm-container">
+        <RootContext.Provider value={this.state}>
+          <RootContext.Consumer>
+            {(root) => (
+              <div>
+                {showComponent === 'list' && <DQMList root={root} {...this.props} />}
+                {showComponent === 'detail' && <DQMDetail root={root} {...this.props} />}
+              </div>
+            )}
+          </RootContext.Consumer>
+        </RootContext.Provider>
+      </div>
     )
   }
 }

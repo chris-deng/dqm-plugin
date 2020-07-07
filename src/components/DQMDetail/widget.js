@@ -1,32 +1,35 @@
 import React from 'react'
 export function formatDetailData(data = {}) {
-  const { project_distribution = [], overview = {} } = data
+  console.log(data)
+  const { detail = [], overview = {} } = data
 
-  const totalRate = overview.rate && (overview.rate * 100).toFixed(2) + '%'
+  // const totalRate = overview.rate && (overview.rate * 100).toFixed(2) + '%'
   const all = [
     {
       project: '全部',
-      target_total: overview.galaxyx_total,
+      target_total: overview.target_total,
       fitted_total: overview.fitted_total,
-      source_total: overview.galaxyx_total,
+      source_total: overview.source_total,
       minus: overview.minus,
       rate: overview.rate && formatRateToStr(overview.rate),
     },
   ]
-  const tmp = project_distribution.map((d) => {
+  const tmp = detail.map((d) => {
     return {
       ...d,
       rate: d.rate && formatRateToStr(d.rate),
-      target_total: d.galaxy_total,
-      source_total: d.galaxyx_total,
+      // target_total: d.galaxy_total,
+      // source_total: d.galaxyx_total,
     }
   })
-  const first20 = tmp.slice(0, 20)
-  const finnalDetailArr = all.concat(first20)
+  // const first20 = tmp.slice(0, 20)
+  const finnalDetailArr = all.concat(tmp)
+  // console.log(finnalDetailArr)
 
-  return { ...data, dataSource: finnalDetailArr }
+  return { ...data, dataSource: finnalDetailArr, total: detail.length }
 }
 export const formatRateToStr = (rate) => (rate * 100).toFixed(2) + '%'
+
 export const pluginDataColumns = [
   { title: '项目', dataIndex: 'project', key: 'project' },
   { title: '目标数据', dataIndex: 'target_total', key: 'target_total' },
